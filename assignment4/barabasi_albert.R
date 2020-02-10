@@ -1,0 +1,5 @@
+library(igraph)
+g <- sample_pa(10000)
+t = table(degree(g))
+plot(t / sum(t), xlim=c(0,32), ylim=c(0,0.25), xlab="Degree", ylab="Frequency")
+#plot(t , xlab="Degree", ylab="Frequency")    

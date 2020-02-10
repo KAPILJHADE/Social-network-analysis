@@ -1,0 +1,8 @@
+library(igraph)
+G3=graph(c(1,"A",2,"B",3,"C",2,"A",1,"C"),directed=F)
+V(G3)$type=c(T,F,T,F,T,F,T)
+V(G3)$color=ifelse(V(G)$type,"lightblue","salmon")
+V(G3)$shape=ifelse(V(G)$type,"square","circle")
+png("/home/kapil/desktop/study material notes/6TH SEM/Social Network Analysis/lab/class5/p1.png",600,600")
+plot(G3,layout=layout.bipartite,edge.color="red")
+G3=write_graph(G3,"/home/kapil/desktop/study material notes/6TH SEM/Social Network Analysis/lab/class2/class2_write/bipartite_write.csv",format="edgelist")

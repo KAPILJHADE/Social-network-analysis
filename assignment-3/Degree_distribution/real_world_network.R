@@ -1,0 +1,6 @@
+library(igraph)
+G = read_graph("/home/stark/Desktop/sna_class/fb1.txt",format = "edgelist")
+V(G)
+E(G)
+t = table(degree(G))
+plot(t / sum(t),xlab="Degree", ylab="Frequency")

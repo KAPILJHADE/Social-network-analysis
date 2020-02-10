@@ -1,0 +1,6 @@
+library(igraph)
+G2=read.csv("/home/kapil/desktop/study material notes/6TH SEM/Social Network Analysis/lab/assignment-3/real_world_networks/dolphin.csv")
+a=data.frame(G2)
+G=graph_from_data_frame(a)
+t = table(degree(G))
+plot(t , xlab="Degree", ylab="Frequency")

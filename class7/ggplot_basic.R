@@ -1,0 +1,8 @@
+library(ggplot2)
+v1=c(1,2,3,4)
+v2=c(5,6,7,8)
+v3=c(9,10,11,12)
+df=cbind.data.frame(v1,v2,v3)
+ggplot(df,aes(x=v1,y=v2,size=v3))+geom_point()
+ggplot(df,aes(x=v1,y=v2,color=v2))+geom_point()
+ggplot(df,aes(x=v1,y=v2,z=v3,color=v3,size=5))+geom_point()

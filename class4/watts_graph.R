@@ -1,0 +1,8 @@
+library(igraph)
+#g <- graph.lattice(5)
+#plot(g, layout=layout.grid(g,width=5))
+#plot(graph.lattice(c(5,5)))
+G2 <- watts.strogatz.game(dim=1,size=1000,nei=40, p=0.5)
+#tkplot(G2)
+t = table(degree(G2))
+plot(t , xlab="Degree", ylab="Frequency")
